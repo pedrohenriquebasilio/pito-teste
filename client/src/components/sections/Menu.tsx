@@ -30,16 +30,16 @@ const MENU_ITEMS = [
 
 export function Menu() {
   return (
-    <section id="menu" className="py-24 px-4 bg-white/50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-6xl font-black uppercase">O Nosso Menu</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+    <section id="menu" className="py-12 sm:py-16 md:py-24 px-3 sm:px-4 bg-white/50 overflow-x-hidden">
+      <div className="max-w-6xl mx-auto w-full">
+        <div className="text-center mb-12 sm:mb-16 space-y-3 sm:space-y-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase px-2">O Nosso Menu</h2>
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-2">
             Simples, direto e delicioso. Especialidades feitas no fogo para o seu deleite.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {MENU_ITEMS.map((section) => (
             <Card key={section.category} className="border-2 border-border shadow-none bg-background">
               <CardHeader className="border-b border-border/10 pb-4">

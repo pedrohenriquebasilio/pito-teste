@@ -34,16 +34,16 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-3 sm:px-4 md:px-6 overflow-x-hidden",
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-8"
+          : "bg-transparent py-4 sm:py-6 md:py-8"
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
         <Link href="/">
           <a className={cn(
-            "text-2xl font-display font-black tracking-tighter uppercase hover:opacity-80 transition-all duration-500",
+            "text-lg sm:text-xl md:text-2xl font-display font-black tracking-tighter uppercase hover:opacity-80 transition-all duration-500 whitespace-nowrap",
             isScrolled ? "text-foreground" : "text-primary-foreground"
           )}>
             PITO DO BAIRRO

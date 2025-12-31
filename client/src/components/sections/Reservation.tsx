@@ -65,27 +65,27 @@ export function Reservation() {
   }
 
   return (
-    <section id="reservations" className="py-24 px-4 bg-primary text-primary-foreground relative overflow-hidden">
+    <section id="reservations" className="py-12 sm:py-16 md:py-24 px-3 sm:px-4 bg-primary text-primary-foreground relative overflow-hidden">
       {/* Abstract Pattern */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       
-      <div className="max-w-4xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight">
+      <div className="max-w-4xl mx-auto relative z-10 w-full">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
+          <div className="space-y-4 sm:space-y-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight">
               Garanta<br />o Seu<br />Lugar
             </h2>
-            <p className="text-primary-foreground/80 text-lg">
+            <p className="text-primary-foreground/80 text-base sm:text-lg">
               Não fique à espera. O Pito é bom, mas voa depressa. Reserve a sua mesa e venha comer o melhor frango do bairro.
             </p>
             <div className="space-y-2 pt-4">
-              <h4 className="font-bold uppercase tracking-widest text-sm opacity-70">Horário</h4>
-              <p className="font-mono text-lg">Ter - Dom: 12h00 - 23h00</p>
-              <p className="font-mono text-lg">Seg: Encerrado para descanso</p>
+              <h4 className="font-bold uppercase tracking-widest text-xs sm:text-sm opacity-70">Horário</h4>
+              <p className="font-mono text-base sm:text-lg">Ter - Dom: 12h00 - 23h00</p>
+              <p className="font-mono text-base sm:text-lg">Seg: Encerrado para descanso</p>
             </div>
           </div>
 
-          <div className="bg-background text-foreground p-8 rounded-2xl shadow-2xl">
+          <div className="bg-background text-foreground p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl shadow-2xl w-full">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
@@ -102,7 +102,7 @@ export function Reservation() {
                   )}
                 />
                 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
                     name="phone"
@@ -142,7 +142,7 @@ export function Reservation() {
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <FormField
                     control={form.control}
                     name="date"
@@ -211,7 +211,7 @@ export function Reservation() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full text-lg py-8 mt-2 rounded-full font-black uppercase tracking-widest shadow-xl">
+                <Button type="submit" className="w-full text-base sm:text-lg py-6 sm:py-7 md:py-8 mt-2 rounded-full font-black uppercase tracking-widest shadow-xl">
                   Reservar Agora
                 </Button>
               </form>
